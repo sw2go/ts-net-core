@@ -11,17 +11,18 @@ cd .vscode and replace text ts-net-core in launch.json and tasks.json
 cd ClientApp
 npm install
 
-Run app from console
---------------------
+Run app from console with hot reload
+------------------------------------
 backend:
-cd ts-net-core
+cd my-new-app
 dotnet watch  
 
 frontend:
-cd ClientApp         
+cd my-new-app/ClientApp
 npm run build
 
-browse to https://localhost:4200
+browse to:
+https://localhost:4200
 
 
 Debugging
@@ -29,8 +30,10 @@ Debugging
 VSCode > 'Open folder' ts-net-core F5 to debug C# .NET Core
 VSCode > 'Open folder' ClientApp   F5 to debug Typescript (Client)
 
-Tips:
------
+Toolchain background infos:
+---------------------------
+When using Visual Studio a *.sln file and a hidden .vs folder will be created automatically but it is not mandatory for the project
+Package handling is easier in visual studio tools package manager, but it can be done form commandline as well (see below)
 /ClientApp/package.json contains npm scripts like "build" to "hot rebuild" changes in typescript
 /ClientApp/webpack.config.js transpiles typescript files into 'wwwroot' of the server
 /.vscode/tasks.json contains definitions like "watch" to "hot reload" files on change (live-server)
