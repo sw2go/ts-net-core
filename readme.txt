@@ -1,21 +1,28 @@
 Copy template
 -------------
+clone 'ts-net-core'
 create an clone empty repository 'my-new-app'
-clone 'ts-net-core' and copy content of 'ts-net-core' (without .git) to 'my-new-app'
+robocopy .\ts-net-core\ .\my-new-app\ /E /R:5 /W:5 /TBD /NP /V /XD ".git" "bin" "obj" "node_modules"
+
 cd my-new-app
 rename ts-net-core.csproj to my-new-app.csproj
-cd .vscode and replace text in launch.json and tasks.json 
-ts-net-core -> my-new-app
+cd .vscode and replace text ts-net-core in launch.json and tasks.json 
 
 cd ClientApp
 npm install
 
-Hot Reload
-----------
-cd ClientApp
-npm run build
+Run app from console
+--------------------
+backend:
 cd ts-net-core
-dotnet watch
+dotnet watch  
+
+frontend:
+cd ClientApp         
+npm run build
+
+browse to https://localhost:4200
+
 
 Debugging
 ---------
