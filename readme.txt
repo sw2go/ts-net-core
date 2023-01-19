@@ -1,7 +1,21 @@
-Copy template
--------------
-clone 'ts-net-core'
-create an clone empty repository 'my-new-app'
+Use the template to try something 
+---------------------------------
+cd temp
+git clone git@github.com:sw2go/ts-net-core.git my-try-folder
+cd my-try-folder
+rd /S .git             ... delete the local repository to avoid an accidental update of the template
+cd ClientApp           
+npm install            ... install node_modules
+npm run build          ... transpile typescript 
+cd ..
+dotnet watch           ... build and run server
+
+Create new repository from template
+-----------------------------------
+create a new empty repository 'my-new-app' on github.com
+clone the new repo: git clone git@github.com:sw2go/my-new-app.git
+clone the template: git clone git@github.com:sw2go/ts-net-core.git
+
 robocopy .\ts-net-core\ .\my-new-app\ /E /R:5 /W:5 /TBD /NP /V /XD ".git" "bin" "obj" "node_modules"
 
 cd my-new-app
