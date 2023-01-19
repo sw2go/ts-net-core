@@ -4,11 +4,11 @@ cd temp
 git clone git@github.com:sw2go/ts-net-core.git my-try-folder
 cd my-try-folder
 rd /S .git             ... delete the local repository to avoid an accidental update of the template
-cd ClientApp           
+cd ClientApp
 npm install            ... install node_modules
-npm run build          ... transpile typescript 
+npm run release        ... transpile typescript 
 cd ..
-dotnet watch           ... build and run server
+dotnet watch           ... build and run server on https://localhost:4200
 
 Create new repository from template
 -----------------------------------
