@@ -1,16 +1,15 @@
-/*!********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/main.css ***!
-  \********************************************************************/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html,
-body {
+html * {
   margin: 0;
   padding: 0;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 .input-zone {
@@ -34,4 +33,4 @@ body {
   padding: 5px;
 }
 
-/*# sourceMappingURL=main.7e560bb46010a3d05435.css.map*/
+/*# sourceMappingURL=main.3dd5543e1af020e44d3a.css.map*/
